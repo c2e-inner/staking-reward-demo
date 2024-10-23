@@ -65,6 +65,21 @@ StakingRewards deployed to: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
 
 将`.env.local.example`的`.example`去掉
 
+即.env文件：
+
+```
+## 质押收益合约地址
+NEXT_PUBLIC_STAKING_REWARDS_CONTRACT=0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+
+## 质押代币地址
+NEXT_PUBLIC_STAKING_TOKEN_ADDRESS=0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+## 收益代币地址
+NEXT_PUBLIC_REWARD_TOKEN_ADDRESS=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+
+
+```
+
 ### 启动前台项目
 
 `npm run dev`
