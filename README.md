@@ -123,7 +123,7 @@ ALCHEMY_API_KEY=...
 
 后端提供两个方向参考，做数据存储或链下验签
 
-- subgraph [theGraph](https://thegraph.com/zh/)可以使用子图服务做数据存储
+- subgraph [theGraph](https://thegraph.com/docs/zh/quick-start/)可以使用子图服务做数据存储
 - geth，使用geth监听链上事件，存储到数据库
 
 
