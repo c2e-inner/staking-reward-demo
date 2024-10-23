@@ -1,5 +1,11 @@
 # 黑客松质押收益项目案例
 
+## demo项目
+- 合约地址（demo只支持了ethereum sepolia）
+ethereum sepolia链合约地址
+
+- 项目访问地址
+
 ## 概述
 案例使用demo中的easy版本StakingRewards.sol，提供一个实现方向，同学可以自己发挥创造力做项目或者在该项目上迭代更多功能
 推荐的组队配置：合约、前端、服务端
@@ -50,7 +56,7 @@ StakingRewards deployed to: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
 
 ### 环境配置说明
 
-将`.env.example`和`.env.local.example`的`.example`去掉
+将`.env.local.example`的`.example`去掉
 
 ### 启动前台项目
 
@@ -93,7 +99,10 @@ ALCHEMY_API_KEY=...
 
 ### 后端
 
-- subgraph
+后端提供两个方向参考，做数据存储或链下验签
+
+- subgraph [theGraph](https://thegraph.com/zh/)可以使用子图服务做数据存储
+- geth，使用geth监听链上事件，存储到数据库
 
 
 
