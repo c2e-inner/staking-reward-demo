@@ -43,7 +43,7 @@ contract StakingRewards {
 
         userStaked[msg.sender] += amount;
         totalStaked += amount;
-
+        
         stakingToken.transferFrom(msg.sender, address(this), amount);
         emit Staked(msg.sender, amount);
     }
@@ -66,6 +66,11 @@ contract StakingRewards {
         require(userStaked[msg.sender] >= amount, "Insufficient staked amount");
 
         uint256 share = (amount * totalShares) / totalStaked;
+        totalShares -= share;
+        userShares[msg.sender] -= share;
+
+        userStaked[msg.sender] -= amount;
+        totalStaked -= amount;
 
         // 发放奖励
         uint256 reward = calculateReward(msg.sender);
@@ -73,12 +78,6 @@ contract StakingRewards {
 
         // 归还质押
         stakingToken.transfer(msg.sender, amount);
-        
-        totalShares -= share;
-        userShares[msg.sender] -= share;
-
-        userStaked[msg.sender] -= amount;
-        totalStaked -= amount;
         emit Withdrawn(msg.sender, amount);
     }
 }

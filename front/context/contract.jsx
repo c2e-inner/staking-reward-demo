@@ -78,7 +78,8 @@ export default function StakingRewardsProvider({ children }) {
 
     const stakeSTK = async () => {
         console.log('stake STK', amount);
-        await stk.approve(contract.address, amount);
+        const receipt = await stk.approve(contract.address, amount); // 正确的做法是先approve，approve事件会被监听，然后再stake
+        await receipt.wait();
         await contract.stake(amount)
     }
     const withdrawRTK = async () => {
