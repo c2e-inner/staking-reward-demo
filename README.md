@@ -26,7 +26,7 @@ StakingRewards: 0x33b13552d8a0AFcF9D9fa42022CBB7Babc24a0FB
     - 前端ui
     - demo项目前端只做了sepolia测试网的工作，同学可以扩展多个网络【网络切换后不同网络的合约切换】
 - 服务端（后端）
-    - 数据存储【可选方案很多，案例项目使用subgraph做参考】
+    - 数据存储【可选方案很多，可以使用subgraph】
     - 后台服务支撑【如果项目涉及一些较复杂的模块，比如链下验签，链下数据处理等，比如有想法的同学可以对接ai服务】
 
 ## 合约部分
@@ -80,7 +80,7 @@ hardhat config配置
 module.exports = {
   solidity: "0.8.27",
   // networks:{
-  // 执行命令：npx hardhat run scripts/deploy.js --network sepolia 会使用这个配置
+  // // 执行命令：npx hardhat run scripts/deploy.js --network sepolia 会使用这个配置
   // sepolia:{
   //   url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`, //你的服务节点地址
   //   accounts: [process.env.PRIVATE_KEY] // 你的真实钱包账号私钥
