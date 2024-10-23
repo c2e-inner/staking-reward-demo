@@ -11,7 +11,7 @@ Reward Token 0x4aaaE6ee7e39DFfE02f6051209A3b5e05a015595
 StakingRewards: 0x33b13552d8a0AFcF9D9fa42022CBB7Babc24a0FB
 
 #### subgraph
-项目将StakingRewards部署到了theGraph上，可以通过以下graphQL命令查询合约log日志
+项目将StakingRewards部署到了theGraph上，可以通过以下graphQL请求查询合约log日志
 ```
 curl -X POST \
   -H "Content-Type: application/json" \
