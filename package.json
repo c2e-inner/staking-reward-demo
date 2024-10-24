@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.6",
+    "@nomicfoundation/ignition-core": "^0.15.6",
     "dotenv": "^16.4.5",
     "hardhat": "^2.22.14"
   },
